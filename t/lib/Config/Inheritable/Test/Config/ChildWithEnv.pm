@@ -6,7 +6,7 @@ use Config::Inheritable base => [qw(Config::Inheritable::Test::Config)],
 
 __PACKAGE__->load(
     title       => 'child_with_env title',
-    desctiption => 'child_with_env description',
+    description => 'child_with_env description',
     author      => 'kentaro',
 );
 

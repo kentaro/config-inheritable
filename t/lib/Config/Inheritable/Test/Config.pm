@@ -5,7 +5,7 @@ use Config::Inheritable;
 
 __PACKAGE__->load(
     title       => 'title',
-    desctiption => 'description',
+    description => 'description',
     author      => 'kentaro',
     env         => {
         default => {

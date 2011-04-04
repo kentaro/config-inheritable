@@ -18,7 +18,7 @@ use Config::Inheritable::Test::Config::Child;
 
     is_deeply(Config::Inheritable::Test::Config::Child->config, +{
         title       => 'child title',
-        desctiption => 'child description',
+        description => 'child description',
         author      => 'kentaro',
         env         => Config::Inheritable::Env->new($env),
     });
