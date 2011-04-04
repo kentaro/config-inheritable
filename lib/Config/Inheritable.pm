@@ -19,7 +19,7 @@ __PACKAGE__->mk_classdata(env => 'CONFIG_ENV');
 __PACKAGE__->mk_classdata(parents => []);
 
 sub import {
-    my ($class, @args) = @_;
+    my ($class, %args) = @_;
     my ($call_pkg) = caller();
 
     {
@@ -27,7 +27,11 @@ sub import {
         unshift @{"$call_pkg\::ISA"}, __PACKAGE__;
     }
 
-    for my $base (@args) {
+    if ($args{env}) {
+        $class->env($args{env});
+    }
+
+    for my $base (@{$args{base} || []}) {
         push @{$call_pkg->parents}, $base;
     }
 }
