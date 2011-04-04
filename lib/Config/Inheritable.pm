@@ -41,7 +41,6 @@ sub load {
             next if $class eq $parent;
             $parent->require or die $@;
             $config = merge $config, $parent->config;
-            warn Dump $config;
         }
     }
 
